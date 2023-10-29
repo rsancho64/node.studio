@@ -35,7 +35,6 @@ sh install.sh
 *=> override the binaries of modules installed with `nvm`:*
 ...
 **#must clean previous**
-```
 
 ### CLEAN previous
 
