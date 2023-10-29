@@ -1,45 +1,45 @@
-# node.studio
+# node.studio @ubuntu
 
-## ubuntu setup: node, nvm, npm, n
+## setup: node, nvm, npm, n
 
-[recipe digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
+recipe: [**digitalocean**](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
 
-Option? : 3 using the **nvm** (user mode, not root) ... `~./nvm` folder ...
+W Option **3**: using the **nvm** (user mode, not root) ... `~./nvm` folder ...
 
-## 1: instalando nvm
+## nvm
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh > install.sh
 sh install.sh
 ```
 
-**log:**
+***log:***
 
-```bash
-=> Downloading nvm from git to '/home/ray/.nvm'
-=> Clonando en '/home/ray/.nvm'...
-remote: Enumerating objects: 360, done.
-remote: Counting objects: 100% (360/360), done.
-remote: Compressing objects: 100% (308/308), done.
-remote: Total 360 (delta 40), reused 166 (delta 27), pack-reused 0
-Recibiendo objetos: 100% (360/360), 191.90 KiB | 629.00 KiB/s, listo.
-Resolviendo deltas: 100% (40/40), listo.
-* (HEAD desacoplado en FETCH_HEAD)
-  master
-=> Compressing and cleaning up git repository
+*=> Downloading nvm from git to '/home/ray/.nvm'*
+*=> Clonando en '/home/ray/.nvm'...*
+*remote: Enumerating objects: 360, done.*
+*remote: Counting objects: 100% (360/360), done.*
+*remote: Compressing objects: 100% (308/308), done.*
+*remote: Total 360 (delta 40), reused 166 (delta 27), pack-reused 0*
+*Recibiendo objetos: 100% (360/360), 191.90 KiB | 629.00 KiB/s, listo.*
+*Resolviendo deltas: 100% (40/40), listo.*
+*(HEAD desacoplado en FETCH_HEAD)*
+*  master*
+*=> Compressing and cleaning up git repository*
 
-=> Appending nvm source string to /home/ray/.bashrc
-=> Appending bash_completion source string to /home/ray/.bashrc
-**=> You currently have modules installed globally with `npm`.** These will no
-=> longer be linked to the active version of Node when you install a new node
-=> with `nvm`; and they may (depending on how you construct your `$PATH`)
-=> override the binaries of modules installed with `nvm`:
-... # must clean previous
+*=> Appending nvm source string to /home/ray/.bashrc*
+*=> Appending bash_completion source string to /home/ray/.bashrc*
+*=> You currently have modules installed globally with `npm`.** These will no*
+*=> longer be linked to the active version of Node when you install a new node*
+*=> with `nvm`; and they may (depending on how you construct your `$PATH`)*
+*=> override the binaries of modules installed with `nvm`:*
+...
+**#must clean previous**
 ```
 
 ### CLEAN previous
 
-[recipe](https://stackoverflow.com/questions/32426601/how-can-i-completely-uninstall-nodejs-npm-and-node-in-ubuntu)
+[**recipe**](https://stackoverflow.com/questions/32426601/how-can-i-completely-uninstall-nodejs-npm-and-node-in-ubuntu)
 
 1. eliminamos la instalacion de usuario de nvm: `rm -rf /home/ray/.nvm/`
 2. eliminamos lo que queda de node en el usuario: `~/.node_repl_history`
