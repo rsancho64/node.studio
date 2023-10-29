@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch holamundoapp",
+            "program": "${workspaceFolder}/holamundoapp/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "runtimeExecutable": "/home/ray/.nvm/versions/node/v20.9.0/bin/node"
+
+        },
+        {
+            "name": "Launch gettin-started-guide",
+            "program": "${workspaceFolder}/gettin-started-guide/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "runtimeExecutable": "/home/ray/.nvm/versions/node/v20.9.0/bin/node"
+        }
+    ]
+}

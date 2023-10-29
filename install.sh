@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# nvm installer nvm installer nvm installer nvm installer nvm installer 
+
 { # this ensures the entire script is downloaded #
 
 nvm_has() {
