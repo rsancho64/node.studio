@@ -126,7 +126,8 @@ lts/iron -> v20.9.0 (-> N/A)
 
 `nvm list-remote` ... `v20.9.0   (Latest LTS: Iron)`
 
-`nvm install lts/iron`   Que el ultimo sea el primero.
+`nvm install lts/iron` Que el ultimo sea el primero.
+
 `nvm list` ... en local: las versiones disponible se ven en **VERDE**:
 
 ```bash
@@ -161,7 +162,7 @@ you’ll first need to deactivate nvm to enable your changes: `nvm deactivate`
 Installing Node.js Versions with n:
 Simply execute n <version> to download n install
 
-see [n site](https://www.npmjs.com/package/n)
+see [**n site**](https://www.npmjs.com/package/n)
 
 `npm install carbon` :: instala en la carpeta local, y no en ~/.nvm/versions/
 
