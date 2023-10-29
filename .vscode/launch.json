@@ -16,8 +16,8 @@
 
         },
         {
-            "name": "Launch gettin-started-guide",
-            "program": "${workspaceFolder}/gettin-started-guide/app.js",
+            "name": "Launch getting-started-guide",
+            "program": "${workspaceFolder}/getting-started-guide/app.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
