@@ -197,15 +197,9 @@ undefined
 
 - [x] holamundo @[MS site](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial) ; touch app.js ...
 
-- [x] holamundo de Node.js en vs code
+- [x] holamundo de Node.js en vs code: **node.org** gettingstarted : [**here**](https://nodejs.org/en/docs/guides/getting-started-guide)
 
-**node.org** gettingstarted : [**here**](https://nodejs.org/en/docs/guides/getting-started-guide)
+- [ ] holamundo angular en vs code: [**tuto**](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
 
-- [ ] holamundo angular en vs code
-
-[**tuto**](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
-
-- [ ] dokerizando una web app Node.js
-
-[**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
+- [ ] dokerizando una web app Node.js: [**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
 
