@@ -169,18 +169,46 @@ see [**n site**](https://www.npmjs.com/package/n)
 ## try node in CLI
 
 ```js
-$ node
+ray@silver:~/node.studio$ node
+Welcome to Node.js v20.9.0.
+Type ".help" for more information.
 > .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+
+Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+> console.log("hellopues");
+hellopues
+undefined
+> 2+3
+5
+> nombre = "ramon";
+'ramon'
+> nombre
+'ramon'
+> .exit
 ```
 
-## holamundo de node con en vs code
+## Tasks n to do's:
+
+- [x] holamundo @[MS site](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial) ; touch app.js ...
+
+- [x] holamundo de Node.js en vs code
 
 **node.org** gettingstarted : [**here**](https://nodejs.org/en/docs/guides/getting-started-guide)
 
-helloworld @  [MS site](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)
+- [ ] holamundo angular en vs code
 
-touch app.js ...
+[**tuto**](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
 
-## holamundo angular en vs code
+- [ ] dokerizando una web app Node.js
 
-[tuto](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
+[**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
+
+
+
