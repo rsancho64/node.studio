@@ -203,3 +203,5 @@ undefined
 
 - [ ] dokerizando una web app Node.js: [**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
 
+- [ ] nodejs-redis-caching [**video**](https://www.youtube.com/watch?v=QUmM8jdviLg) n [**repo**](https://github.com/FaztWeb/nodejs-redis-caching)https://github.com/FaztWeb/nodejs-redis-caching
+
