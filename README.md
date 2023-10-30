@@ -59,6 +59,7 @@ corepack -> ../lib/node_modules/corepack/dist/corepack.js
 npm -> ../lib/node_modules/npm/bin/npm-cli.js
 npx -> ../lib/node_modules/npm/bin/npx-cli.js
 ```
+[npx?](https://tincode.es/blog/diferencia-entre-los-comandos-npm-y-npx)
 
 `sudo rm -Rf node corepack npm npx`
 
