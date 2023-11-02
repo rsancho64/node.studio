@@ -326,6 +326,29 @@ vs
 ## xtras docker
 
 - [ ] get a free Docker ID: [**https://hub.docker.com/**](https://hub.docker.com/) to share images, automate workflows, and more. 
-- [ ] visit: [**https://docs.docker.com/get-started/**](https://docs.docker.com/get-started/) 4 more examples and ideas. 
 
+  - [X] get [**docker desktop app**](https://docs.docker.com/desktop/install/linux-install/)  ... ubuntu ... 
+  
+  `.deb` ... `dpkg -i` :
+
+```bash
+
+sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb
+...
+dpkg: problemas de dependencias impiden la configuración de docker-desktop:
+ docker-desktop depende de qemu-system-x86 (>= 5.2.0); sin embargo:
+El paquete `qemu-system-x86' no está instalado.
+ docker-desktop depende de pass; sin embargo:
+El paquete `pass' no está instalado.
+ docker-desktop depende de uidmap; sin embargo:
+El paquete `uidmap' no está instalado.
+
+sudo apt install qemu-system-x86 # ...
+sudo apt install pass # ya esta!?
+sudo apt install uidmap # ya esta!?
+
+sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb # ... ... OK NOW
+```
+
+- [ ] visit: [**https://docs.docker.com/get-started/**](https://docs.docker.com/get-started/) 4 more examples and ideas. 
 
