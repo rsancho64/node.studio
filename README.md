@@ -333,6 +333,7 @@ vs
 
 ```bash
 
+
 sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb
 ...
 dpkg: problemas de dependencias impiden la configuración de docker-desktop:
