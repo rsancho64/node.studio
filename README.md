@@ -297,28 +297,31 @@ exit
 - [x] allow normal user to run Docker commands and optional config steps: [**linux postinstall**](https://docs.docker.com/engine/install/linux-postinstall) 
 
 ```bash
-sudo groupadd docker` # create the docker group.
-sudo usermod -aG docker $USER` # add your user to the docker group.
+sudo groupadd docker # create the docker group.
+sudo usermod -aG docker $USER # add your user to the docker group.
+# now: Log in to the new docker group (to avoid having to log out / log in again; 
+# but if not enough, try to reboot):
+#- [ ] Logout n log-back-in so that your group membership is re-evaluated.
+newgrp docker
 #sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 #sudo chmod g+rwx "$HOME/.docker" -R
 #try no-sudo:
 docker run hello-world # ok!
 ```
 
-- [ ] Logout n log-back-in so that your group membership is re-evaluated.
-
 ### docker to start on boot (w systmd)
 
 [**see config daemon**](https://docs.docker.com/config/daemon/systemd/)
 
-*sudo systemctl enable docker.service*
-*sudo systemctl enable containerd.service*
+- sudo systemctl enable docker.service
+- sudo systemctl enable containerd.service
+
 vs
-*sudo systemctl disable docker.service*
-*sudo systemctl disable containerd.service*
+
+- sudo systemctl disable docker.service
+- sudo systemctl disable containerd.service
 
 - [ ] [Configure default logging driver](https://docs.docker.com/engine/install/linux-postinstall/#configure-default-logging-driver)
-
 
 ## xtras docker
 
