@@ -202,7 +202,127 @@ undefined
 
 - [ ] holamundo angular en vs code: [**tuto**](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
 
-- [ ] dokerizando una web app Node.js: [**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
+- [ ] **BROKEN LINK** dokerizando una web app Node.js: [**tuto**](https://nodejs.org/en/docs/guides/nodejs-docker-webapp)
 
 - [ ] nodejs-redis-caching [**video**](https://www.youtube.com/watch?v=QUmM8jdviLg) n [**repo**](https://github.com/FaztWeb/nodejs-redis-caching)https://github.com/FaztWeb/nodejs-redis-caching
+
+******
+
+## doker 101
+
+[**https://docs.docker.com/get-started/**](https://docs.docker.com/get-started/) ...
+[**https://docs.docker.com/get-started/02_our_app/**](https://docs.docker.com/get-started/02_our_app/) ,, 
+- [x] install [latest**Docker Desktop**](https://docs.docker.com/get-docker/)
+
+https://docs.docker.com/desktop/install/linux-install/ :
+
+```bash
+modprobe kvm ,,
+modprobe kvm_intel  # Intel processors ,,
+sudo apt install cpu-checker
+kvm-ok #: out: /dev/kvm exists ; KVM acceleration can be used
+lsmod | grep kvm #: INFO:
+  kvm_intel             503808  0
+  kvm                  1347584  1 kvm_intel
+  irqbypass              16384  1 kvm
+```
+
+```bash
+file /dev/kvm # /dev/kvm: character special (10/232) 
+ls -al /dev/kvm #: out: crw-rw----+ 1 root kvm *10, 232 nov  1 23:21 /dev/kvm  ,,:
+sudo usermod -aG kvm $USER
+```
+
+prev clean if any:
+`rm -rf $HOME/.docker/desktop` 
+`sudo rm -f /usr/local/bin/com.docker.cli` 
+`sudo apt purge docker-desktop`
+
+Add Docker's official GPG key:
+
+```bash
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+Add the repository to Apt sources:
+
+```bash
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+
+INSTALL DOCKER SW -NOW-
+
+`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
+
+DOCKER HELLOWORLD:
+
+`sudo docker run hello-world`
+```
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete 
+Digest: sha256:88ec0acaa3ec199d3b7eaf73588f4518c25f9d34f58ce9a0df68429c5af48e8d
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon:
+   1. **pulled the "hello-world" image** from the Docker Hub. (amd64)
+   2. **created a new container from that image** which 
+      1. runs the executable that produces the output you are currently reading.
+   3. streamed that output to the Docker client, which sent it to your terminal.
+```
+
+- [x] more ambitious: run an *Ubuntu container* with `docker run -it ubuntu bash`
+
+```bash
+root@01368d9ea090:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@01368d9ea090:/# exit
+exit
+```
+
+- [x] allow normal user to run Docker commands and optional config steps: [**linux postinstall**](https://docs.docker.com/engine/install/linux-postinstall) 
+
+```bash
+sudo groupadd docker` # create the docker group.
+sudo usermod -aG docker $USER` # add your user to the docker group.
+#sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+#sudo chmod g+rwx "$HOME/.docker" -R
+#try no-sudo:
+docker run hello-world # ok!
+```
+
+- [ ] Logout n log-back-in so that your group membership is re-evaluated.
+
+### docker to start on boot (w systmd)
+
+[**see config daemon**](https://docs.docker.com/config/daemon/systemd/)
+
+*sudo systemctl enable docker.service*
+*sudo systemctl enable containerd.service*
+vs
+*sudo systemctl disable docker.service*
+*sudo systemctl disable containerd.service*
+
+- [ ] [Configure default logging driver](https://docs.docker.com/engine/install/linux-postinstall/#configure-default-logging-driver)
+
+
+## xtras docker
+
+- [ ] get a free Docker ID: [**https://hub.docker.com/**](https://hub.docker.com/) to share images, automate workflows, and more. 
+- [ ] visit: [**https://docs.docker.com/get-started/**](https://docs.docker.com/get-started/) 4 more examples and ideas. 
+
 
