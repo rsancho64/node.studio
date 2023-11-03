@@ -385,7 +385,7 @@ vs
 
 ## Construir imagen Docker desde un proyecto en vscode
 
-- [ ] **MVE**: [https://code.visualstudio.com/docs/containers/quickstart-node)]
+- [ ] **M.W.E.**: [https://code.visualstudio.com/docs/containers/quickstart-node)]
 
 Para hacerse idea del encademamiento de fases y dependencias:
 
