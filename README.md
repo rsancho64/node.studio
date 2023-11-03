@@ -385,6 +385,8 @@ vs
 
 ## Construir imagen Docker desde un proyecto en vscode
 
+- [ ] **MVE**: [https://code.visualstudio.com/docs/containers/quickstart-node)]
+
 Para hacerse idea del encademamiento de fases y dependencias:
 
 - [ ] see ytb: ["Node y Docker: Crear y subir imagen a Docker Hub" (t:2:47)](https://youtu.be/l-UZQjdPUAI?t=247)
