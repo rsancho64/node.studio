@@ -315,6 +315,8 @@ docker run hello-world # ok!
 
 [**see config daemon**](https://docs.docker.com/config/daemon/systemd/)
 
+## utileria utileria utileria utileria utileria 
+
 - sudo systemctl enable docker.service
 - sudo systemctl enable containerd.service
 
@@ -323,7 +325,8 @@ vs
 - sudo systemctl disable docker.service
 - sudo systemctl disable containerd.service
 
-- [ ] [Configure default logging driver](https://docs.docker.com/engine/install/linux-postinstall/#configure-default-logging-driver)
+
+- [?] [Configure default logging driver](https://docs.docker.com/engine/install/linux-postinstall/#configure-default-logging-driver)
 
 ## xtras docker
 
@@ -333,25 +336,55 @@ vs
   
   `.deb` ... `dpkg -i` :
 
-```bash
+  ```bash
 
+  sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb
+  ...
+  dpkg: problemas de dependencias impiden la configuración de docker-desktop:
+  docker-desktop depende de qemu-system-x86 (>= 5.2.0); sin embargo:
+  El paquete `qemu-system-x86' no está instalado.
+  docker-desktop depende de pass; sin embargo:
+  El paquete `pass' no está instalado.
+  docker-desktop depende de uidmap; sin embargo:
+  El paquete `uidmap' no está instalado.
 
-sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb
-...
-dpkg: problemas de dependencias impiden la configuración de docker-desktop:
- docker-desktop depende de qemu-system-x86 (>= 5.2.0); sin embargo:
-El paquete `qemu-system-x86' no está instalado.
- docker-desktop depende de pass; sin embargo:
-El paquete `pass' no está instalado.
- docker-desktop depende de uidmap; sin embargo:
-El paquete `uidmap' no está instalado.
+  sudo apt install qemu-system-x86 # ...
+  sudo apt install pass # ya esta!?
+  sudo apt install uidmap # ya esta!?
 
-sudo apt install qemu-system-x86 # ...
-sudo apt install pass # ya esta!?
-sudo apt install uidmap # ya esta!?
+  sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb # ... ... OK NOW
+  ```
 
-sudo dpkg -i /home/ray/Descargas/docker-desktop-4.25.0-amd64.deb # ... ... OK NOW
-```
+  Docker Desktop inicia pero no conecta. link -> [**howto fix credentials**](https://docs.docker.com/desktop/get-started/#credentials-management-for-linux-users) :
+
+  ```bash
+
+  gpg --generate-key  # set:  user+email+pass
+  ...
+  gpg: clave 482E3B59F0E48E2F marcada como de confianza absoluta
+  gpg: creado el directorio '/home/ray/.gnupg/openpgp-revocs.d'
+  gpg: certificado de revocación guardado como '/home/ray/.gnupg/openpgp-revocs.d/<<gpg-id_public_key>>.rev'
+  claves pública y secreta creadas y firmadas.
+
+  pub   rsa3072 2023-11-02 [SC] [caduca: 2025-11-01]
+        <<gpg-id_public_key>>
+  uid                      ramon sancho <rsancho@iesrioarba.es>
+  sub   rsa3072 2023-11-02 [E] [caduca: 2025-11-01]
+
+  # now:
+  `pass init <your_generated_gpg-id_public_key>`
+  mkdir: se ha creado el directorio '/home/ray/.password-store/'
+  Password store initialized for <<gpg-id_public_key>>
+
+  ```
+  Docker Desktop credentials fixed
+
 
 - [ ] visit: [**https://docs.docker.com/get-started/**](https://docs.docker.com/get-started/) 4 more examples and ideas. 
 
+
+## Construir imagen Docker desde un proyecto en vscode
+
+Para hacerse idea del encademamiento de fases y dependencias:
+
+- [ ] see ytb: ["Node y Docker: Crear y subir imagen a Docker Hub" (t:2:47)](https://youtu.be/l-UZQjdPUAI?t=247)
